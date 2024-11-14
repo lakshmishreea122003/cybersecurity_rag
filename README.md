@@ -16,4 +16,4 @@ Graph Storage: The generated knowledge graph is stored in a Neo4j database for e
 - Cybersecurity Focus: The project is designed to enhance understanding and response generation for cybersecurity-related knowledge through a graph-based approach.
 - Automated Knowledge Updates: The graph can be continuously updated with new knowledge, keeping the information up-to-date and relevant for ongoing queries.
 
-
+video link: https://drive.google.com/drive/folders/1sih_L6R23TMaYPmyQcBKgPYUYE24Wf2V
