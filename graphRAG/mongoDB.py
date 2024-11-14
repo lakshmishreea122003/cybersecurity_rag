@@ -3,12 +3,12 @@ from urllib.parse import quote_plus
 import streamlit as st
 
 class DatabaseClient:
-    def __init__(self, username: str, password: str, db_name: str, collection_name: str):
-        self.username = quote_plus(username)
-        self.password = quote_plus(password)
+    def __init__(self):
+        self.username = quote_plus("username")
+        self.password = quote_plus("password")
         self.uri = f"mongodb+srv://{self.username}:{self.password}@graphrag.6b59m.mongodb.net/?retryWrites=true&w=majority&appName=graphRAG"
-        self.db_name = db_name
-        self.collection_name = collection_name
+        self.db_name = "db_name"
+        self.collection_name = "collection_name"
         self.client = None
         self.db = None
         self.collection = None
