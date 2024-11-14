@@ -1,8 +1,0 @@
-python 
-pymongo 
-urllib
-streamlit 
-langchain-openai 
-langchain-experimental 
-llama-index 
-os

@@ -9,15 +9,15 @@ from llama_index.core.response_synthesis import ResponseSynthesizer
 
 
 class KnowledgeGraphPipeline:
-    def __init__(self, text, openai_api_key, neo4j_url, neo4j_username, neo4j_password):
+    def __init__(self, text):
         """
         Initializes the Knowledge Graph Pipeline with text input, OpenAI API key, and Neo4j credentials.
         """
         self.texts = text
-        self.neo4j_url = neo4j_url
-        self.neo4j_username = neo4j_username
-        self.neo4j_password = neo4j_password
-        os.environ["OPENAI_API_KEY"] = openai_api_key
+        self.neo4j_url = "neo4j_url"
+        self.neo4j_username = "neo4j_username"
+        self.neo4j_password = "neo4j_password"
+        os.environ["OPENAI_API_KEY"] = "openai_api_key"
         self.llm = OpenAI(
             temperature=0,
             max_output_tokens=1000,
@@ -34,7 +34,7 @@ class KnowledgeGraphPipeline:
         documents = [Document(page_content=self.texts)]
         llm_transformer = LLMGraphTransformer(llm=self.llm)
         graph_documents = llm_transformer.convert_to_graph_documents(documents)
-        self.graph_store.write_graph(graph_documents)
+        # self.graph_store.write_graph(graph_documents)
         graph_handler = MyGraphHandler(self.neo4j_url, self.neo4j_username, self.neo4j_password)
         with self.graph_store.driver.session() as session:
             # Handle nodes
