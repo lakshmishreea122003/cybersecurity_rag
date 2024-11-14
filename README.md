@@ -6,6 +6,5 @@ I developed a graph-based Retrieval-Augmented Generation (RAG) system for cybers
 ## Project Workflow
 ![Project Flow](https://github.com/lakshmishreea122003/cybersecurity_rag/blob/main/flowcharts/Screenshot%202024-11-14%20084524.jpg)
 
-## LangGraph Usage
-![LangGraph](https://github.com/lakshmishreea122003/cybersecurity_rag/blob/main/flowcharts/Screenshot%202024-11-14%20084936.jpg)
+
 
