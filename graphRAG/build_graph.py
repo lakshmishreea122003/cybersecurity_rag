@@ -20,9 +20,9 @@ class KnowledgeGraphPipeline:
         Initializes the Knowledge Graph Pipeline with text input, OpenAI API key, and Neo4j credentials.
         """
         self.texts = text
-        self.neo4j_url = "neo4j+s://e968b27a.databases.neo4j.io"
-        self.neo4j_username = "neo4j"
-        self.neo4j_password = "jfIivFR8ZFturZpYMs483we2q9WOyfowIV18BkgFxOs"
+        self.neo4j_url = ""
+        self.neo4j_username = ""
+        self.neo4j_password = ""
         self.database="neo4j"
         self.llm = OpenAI(
             temperature=0,
