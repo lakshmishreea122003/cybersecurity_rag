@@ -35,6 +35,7 @@ class KnowledgeGraphPipeline:
         llm_transformer = LLMGraphTransformer(llm=self.llm)
         graph_documents = llm_transformer.convert_to_graph_documents(documents)
         # self.graph_store.write_graph(graph_documents)
+        graph_store.query("""MATCH (n) DETACH DELETE n""")
         graph_handler = MyGraphHandler(self.neo4j_url, self.neo4j_username, self.neo4j_password)
         with self.graph_store.driver.session() as session:
             # Handle nodes
